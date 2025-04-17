@@ -119,6 +119,9 @@ fun AdminHomePage(navController: NavController,    authViewModel: AuthViewModel
         Button(onClick = { navController.navigate("admin-app")}, modifier = Modifier.fillMaxWidth()) {
             Text("🗓 Appointments")
         }
+        Button(onClick = { navController.navigate("message")}, modifier = Modifier.fillMaxWidth()) {
+            Text("💬 Messages")
+        }
         Button(onClick = { navController.navigate("attendance")}, modifier = Modifier.fillMaxWidth()) {
             Text("📊 Attendance")
         }
@@ -188,11 +191,11 @@ fun SpecialistHomePage(authViewModel: AuthViewModel,navController: NavController
         Button(onClick = { navController.navigate("spec-app")}, modifier = Modifier.fillMaxWidth()) {
             Text("👥 View Patients")
         }
-        Button(onClick = { /*TODO*/ }, modifier = Modifier.fillMaxWidth()) {
-            Text("📥 Upload Prescription")
-        }
         Button(onClick = { navController.navigate("message")}, modifier = Modifier.fillMaxWidth()) {
             Text("💬 Messages")
+        }
+        Button(onClick = { /*TODO*/ }, modifier = Modifier.fillMaxWidth()) {
+            Text("📥 Upload Prescription")
         }
         Button(onClick = {
             authViewModel.signout()
